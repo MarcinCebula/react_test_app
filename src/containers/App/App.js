@@ -1,19 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-/* import { Layout, LocaleProvider } from 'antd';*/
-import authAction from '../../redux/auth/actions';
-import appActions from '../../redux/app/actions';
 import AppRouter from './AppRouter';
 import { siteConfig } from '../../config.js';
 import { AppLocale } from '../../index';
-
 import AppWrapper from './style';
-
 import { Layout, Menu, Breadcrumb } from 'antd';
+
 const { Header, Content, Footer } = Layout;
 
-const { logout } = authAction;
-const { toggleAll } = appActions;
 
 
 export class App extends Component {
@@ -44,7 +38,7 @@ export class App extends Component {
             <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>
-            Ant Design ©2016 Created by Ant UED
+            Learn React with <strong>Rocket3.io</strong> ©2017 Created by <b>Marcin K Cebula</b>
           </Footer>
         </Layout>
       </AppWrapper>
@@ -53,8 +47,5 @@ export class App extends Component {
 }
 
 export default connect(
-  state => ({
-    auth: state.Auth
-  }),
-  { logout, toggleAll }
+  state => ({ }),  { }
 )(App);
