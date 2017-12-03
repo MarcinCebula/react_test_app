@@ -1,7 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import asyncComponent from '../../helpers/AsyncFunc';
-import getDevRouters from '../../customApp/router';
 
 class AppRouter extends React.Component {
   render() {
@@ -382,8 +381,6 @@ class AppRouter extends React.Component {
            >
          </Route>
 
-
-              {getDevRouters(url)}
       </Switch>
     );
   }
