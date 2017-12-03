@@ -54,9 +54,7 @@ export class App extends Component {
 
 export default connect(
   state => ({
-    auth: state.Auth,
-    locale: state.LanguageSwitcher.toJS().language.locale,
-    selectedTheme: state.ThemeSwitcher.toJS().changeThemes.themeName,
+    auth: state.Auth
   }),
   { logout, toggleAll }
 )(App);
