@@ -3,23 +3,11 @@ import { Route, Redirect } from 'react-router-dom';
 import { ConnectedRouter } from 'react-router-redux';
 import { connect } from 'react-redux';
 
-import App from './containers/App/App';
-import asyncComponent from './helpers/AsyncFunc';
+import App1 from './app1/containers/App/App';
+import App2 from './app2/containers/App/App';
+import asyncComponent from './app1/helpers/AsyncFunc';
 
-const RestrictedRoute = ({ component: Component, ...rest, isLoggedIn }) =>
-  <Route
-    {...rest}
-    render={props =>
-      isLoggedIn
-        ? <Component {...props} />
-        : <Redirect
-            to={{
-              pathname: '/signin',
-              state: { from: props.location }
-            }}
-          />}
-  />;
-const PublicRoutes = ({ history, isLoggedIn }) => {
+const PublicRoutes = ({ history }) => {
   return (
     <ConnectedRouter history={history}>
       <div>
@@ -28,11 +16,16 @@ const PublicRoutes = ({ history, isLoggedIn }) => {
           path={'/'}
           component={App}
         />
+        <Route
+          exact
+          path="/app1"
+          component={App1}
 
-        <RestrictedRoute
-          path="/dashboard"
-          component={App}
-          isLoggedIn={isLoggedIn}
+        />
+        <Route
+          exact
+          path="/app2"
+          component={App2}
         />
       </div>
     </ConnectedRouter>

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import AppRouter from './AppRouter';
 import { siteConfig } from '../../config.js';
-import { AppLocale } from '../../index';
 import AppWrapper from './style';
 import { Layout, Menu, Breadcrumb } from 'antd';
 
@@ -35,7 +34,9 @@ export class App extends Component {
               <Breadcrumb.Item>List</Breadcrumb.Item>
               <Breadcrumb.Item>App</Breadcrumb.Item>
             </Breadcrumb>
-            <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content</div>
+            <div style={{ background: '#fff', padding: 24, minHeight: 280 }}>Content
+              <h1>APP 1: Content</h1>
+            </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>
             Learn React with <strong>Rocket3.io</strong> ©2017 Created by <b>Marcin K Cebula</b>
