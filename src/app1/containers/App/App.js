@@ -5,7 +5,7 @@ import { siteConfig } from '../../config.js';
 import AppWrapper from './style';
 import { Layout, Menu, Breadcrumb } from 'antd';
 import axios from 'axios';
-
+import { aniListConfig } from '../../config'
 
 const { Header, Content, Footer } = Layout;
 
@@ -19,7 +19,8 @@ const { Header, Content, Footer } = Layout;
 export class App extends Component {
 
   componentDidMount() {
-    axios.post("auth/access_token")
+
+    axios.post("https://anilist.co/api/auth/access_token", {params: aniListConfig})
          .then(function (response) {
            console.log(response);
          })
@@ -33,7 +34,7 @@ export class App extends Component {
     return (
       <AppWrapper>
         <Layout style={{backgroundColor: 'white'}}>
-          <Header theme="Light">
+          <Header>
             <div className="logo" />
             <Menu
               theme="Light"

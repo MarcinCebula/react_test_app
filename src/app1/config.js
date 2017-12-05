@@ -19,7 +19,14 @@ const fireBaseConfig = {
 };
 // firebase.initializeApp(fireBaseConfig);
 
+const aniListConfig = {
+  grant_type    :  'client_credentials',
+  client_id     :  'marcinkcebula-nny6l',
+  client_secret :  'jVAfgqHGh1J9bwjjZxLzR3OLV6Eu'
+}
+
 export {
+  aniListConfig,
   fireBaseConfig,
   siteConfig
 };

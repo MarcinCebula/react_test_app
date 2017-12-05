@@ -13,33 +13,6 @@ class AppRouter extends React.Component {
           component={asyncComponent(() => import('../Meetup/index.js'))}
         >
         </Route>
-        <Route
-          exact
-          path={`${url}/forms`}
-          component={asyncComponent(() => import('../Meetup/index.js'))}
-        >
-        </Route>
-
-        <Route
-          exact
-          path={`${url}/inquiries`}
-          component={asyncComponent(() => import('../Meetup/index.js'))}
-        >
-        </Route>
-
-        <Route
-          exact
-          path={`${url}/form-builder`}
-          component={asyncComponent(() => import('../Meetup/index.js'))}
-        >
-        </Route>
-
-        <Route
-          exact
-          path={`${url}/froms`}
-          component={asyncComponent(() => import('../Meetup/index.js'))}
-        >
-        </Route>
 
       </Switch>
     );
