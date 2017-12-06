@@ -22,11 +22,6 @@ const PublicRoutes = ({ history }) => {
           component={App1}
 
         />
-        <Route
-          exact
-          path="/app2"
-          component={App2}
-        />
       </div>
     </ConnectedRouter>
   );
